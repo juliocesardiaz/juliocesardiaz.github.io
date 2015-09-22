@@ -1,6 +1,7 @@
 h1 {
     text-align: center;
     color: white;
+    outline-color: white;
 }
 
 .jumbotron {
@@ -8,5 +9,9 @@ h1 {
 }
 
 .container-fluid {
+    background: black;
+}
+
+html{
     background: black;
 }
