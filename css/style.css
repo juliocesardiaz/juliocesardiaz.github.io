@@ -3,6 +3,12 @@ h1 {
     color: white;
     outline-color: white;
 }
+h5 {
+    text-align: left;
+    padding-left:  50px;
+    color: white;
+    outline-color: white;
+}
 
 .container-fluid {
     background: black;
