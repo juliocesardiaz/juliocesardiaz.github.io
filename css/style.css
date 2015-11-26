@@ -33,7 +33,7 @@ a:link, a:visited, a:active {
 
 a:hover{
     font-weight: bolder;
-    color: lightgray;
+    color: lightslategrey;
 }
 
 .comingsoon {
