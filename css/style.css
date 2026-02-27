@@ -24,7 +24,12 @@ html{
   justify-content: center;
   align-items: flex-start;
   min-height: 100vh;
-  padding: 0 2rem;
+  padding: 0 2rem 0 6rem;
+}
+
+.centered h1 {
+  font-size: 2rem;
+  letter-spacing: 0;
 }
 
 a:link, a:visited, a:active {
