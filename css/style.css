@@ -5,9 +5,12 @@ h1 {
 }
 h5 {
     text-align: left;
-    padding-left:  50px;
     color: white;
     outline-color: white;
+}
+
+.centered h5 {
+    padding-left: 50px;
 }
 
 .container-fluid {
@@ -40,6 +43,30 @@ a:link, a:visited, a:active {
 a:hover{
     font-weight: bolder;
     color: lightslategrey;
+}
+
+.page {
+    max-width: 65ch;
+    padding: 4rem 2rem 4rem 6rem;
+}
+
+.page p {
+    margin-bottom: 1.5rem;
+}
+
+.back {
+    margin-bottom: 3rem;
+}
+
+.log-entry {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.log-entry time {
+    color: lightslategrey;
+    white-space: nowrap;
 }
 
 .comingsoon {
