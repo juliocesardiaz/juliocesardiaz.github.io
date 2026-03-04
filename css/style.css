@@ -64,6 +64,15 @@ code {
   font-weight: 300;
 }
 
+/* Home portrait */
+.home-portrait {
+  width: 100%;
+  max-width: 22rem;
+  margin-bottom: 2.4rem;
+  filter: invert(1);
+  mix-blend-mode: screen;
+}
+
 /* Inner pages */
 .page {
   max-width: 65ch;
