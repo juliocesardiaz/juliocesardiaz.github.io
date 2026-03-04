@@ -1,12 +1,20 @@
 /* Palette */
 :root {
-  --black:    #0A0A0A;
-  --bone:     #F0EBE3;
-  --concrete: #2A2826;
-  --dim:      #635E59;
-  --teal:     #00F0B5;
-  --purple:   #8B30FF;
-  --red:      #FF2E4C;
+  /* Ground Mode */
+  --black:     #0A0A0A;   /* Lamp Black — default background */
+  --bone:      #F0EBE3;   /* Bone — text, line work */
+  --concrete:  #2A2826;   /* Wet Concrete — secondary surfaces, code blocks */
+  --dim:       #635E59;   /* mid-tone — timestamps, back links */
+  --dark-teal: #0A2A28;   /* Dark Teal Ground — photo alternative to black */
+
+  /* Detonation Colors */
+  --teal:      #00F0B5;   /* Spectral Teal — UI: links, active, code */
+  --blue:      #0038FF;   /* Electric Blue — primary detonation */
+  --red:       #FF0A0A;   /* Signal Red — spot detonation */
+  --red-flood: #E8503A;   /* Vermillion Flood — full-field warm red */
+  --yellow:    #FFD900;   /* Broadcast Yellow — graphic interruptions */
+  --pink:      #FF0090;   /* Hot Pink — rave-flyer, headers, bars */
+  --gold:      #C4922A;   /* Gold — photographic/physical contexts only */
 }
 
 /* Ground */
