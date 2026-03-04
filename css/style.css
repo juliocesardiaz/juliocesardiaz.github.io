@@ -1,26 +1,49 @@
+/* Palette */
+:root {
+  --black:    #0A0A0A;
+  --bone:     #F0EBE3;
+  --concrete: #2A2826;
+  --dim:      #635E59;
+  --teal:     #00F0B5;
+  --purple:   #8B30FF;
+  --red:      #FF2E4C;
+}
+
+/* Ground */
+html { background: var(--black); }
+body { color: var(--bone); }
+
+/* Headings */
 h1 {
-    text-align: left;
-    color: white;
-    outline-color: white;
+  color: var(--bone);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 h5 {
-    text-align: left;
-    color: white;
-    outline-color: white;
+  color: var(--bone);
+  font-weight: 300;
 }
 
-.centered h5 {
-    padding-left: 50px;
+/* Links — Bone default, Teal on hover, no layout reflow */
+a:link, a:visited, a:active {
+  color: var(--bone);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--teal);
 }
 
-.container-fluid {
-    background: black;
+/* Code — Spectral Teal on Wet Concrete */
+code {
+  font-family: 'IBM Plex Mono', 'Berkeley Mono', 'JetBrains Mono', monospace;
+  color: var(--teal);
+  background: var(--concrete);
+  padding: 0.1em 0.4em;
+  font-size: 0.88em;
 }
 
-html{
-    background: black;
-}
-
+/* Home page */
 .centered {
   display: flex;
   flex-direction: column;
@@ -29,50 +52,58 @@ html{
   min-height: 100vh;
   padding: 0 2rem 0 6rem;
 }
-
 .centered h1 {
   font-size: 2rem;
-  letter-spacing: 0;
+  letter-spacing: 0.2em;
+  margin-bottom: 2.4rem;
+}
+.centered h5 {
+  padding-left: 50px;
+  font-size: 1.2rem;
+  letter-spacing: 0.12em;
+  font-weight: 300;
 }
 
-a:link, a:visited, a:active {
-    color: white;
-    text-decoration: none;
-}
-
-a:hover{
-    font-weight: bolder;
-    color: lightslategrey;
-}
-
+/* Inner pages */
 .page {
-    max-width: 65ch;
-    padding: 4rem 2rem 4rem 6rem;
+  max-width: 65ch;
+  padding: 4rem 2rem 4rem 6rem;
 }
-
 .page p {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.55;
 }
-
 .back {
-    margin-bottom: 3rem;
+  margin-bottom: 4rem;
+  color: var(--dim);
+  font-size: 1.2rem;
+  letter-spacing: 0.06em;
 }
 
+/* Log entries */
 .log-entry {
-    display: flex;
-    gap: 2rem;
-    margin-bottom: 1rem;
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
 }
-
 .log-entry time {
-    color: lightslategrey;
-    white-space: nowrap;
+  color: var(--dim);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
-.comingsoon {
-    text-align: center;
-    background-color: lightpink;
+/* Article datestamp */
+article > time {
+  display: block;
+  color: var(--dim);
+  letter-spacing: 0.06em;
+  margin-bottom: 1.5rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.2rem;
 }
+
+/* Project pages */
 .bottom {
-    text-align: center;
+  text-align: center;
 }
