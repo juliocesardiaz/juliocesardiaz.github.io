@@ -166,3 +166,9 @@ article > time {
 .bottom {
   text-align: center;
 }
+.bottom a:link, .bottom a:visited, .bottom a:active {
+  color: var(--red);
+}
+.bottom a:hover {
+  color: var(--bone);
+}
