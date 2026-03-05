@@ -145,6 +145,9 @@ article > time {
 
 /* Mobile */
 @media (max-width: 600px) {
+  .site-mark {
+    left: 1.5rem;
+  }
   .centered {
     padding: 3rem 1.5rem;
   }
@@ -161,6 +164,45 @@ article > time {
   .page {
     padding: 3rem 1.5rem;
   }
+}
+
+/* Site mark — small favicon link fixed at bottom of every page */
+.site-mark {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 6rem;
+  color: var(--bone);
+  opacity: 0.45;
+  transition: color 0.15s, opacity 0.15s;
+  line-height: 0;
+  display: block;
+}
+.site-mark:hover {
+  color: var(--red);
+  opacity: 1;
+}
+
+/* Projects page sections */
+.projects-section {
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin: 3rem 0 0.75rem;
+}
+.old-link {
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.6rem;
+}
+.old-link .fa-github {
+  color: var(--dim);
+  font-size: 0.85em;
+  margin-left: 0.4em;
+}
+.old-link .fa-github:hover {
+  color: var(--teal);
 }
 
 /* Project pages */
