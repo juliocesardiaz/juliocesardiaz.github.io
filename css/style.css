@@ -135,6 +135,33 @@ article > time {
   font-size: 1.2rem;
 }
 
+/* About page mark */
+.page-mark {
+  display: block;
+  width: 6rem;
+  margin: 0 auto 3rem;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .centered {
+    padding: 3rem 1.5rem;
+  }
+  .centered h5 {
+    padding-left: 0;
+  }
+  .home-hero {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .home-portrait {
+    max-width: 100%;
+  }
+  .page {
+    padding: 3rem 1.5rem;
+  }
+}
+
 /* Project pages */
 .bottom {
   text-align: center;
