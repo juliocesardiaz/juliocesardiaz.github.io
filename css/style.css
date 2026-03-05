@@ -72,11 +72,8 @@ code {
   letter-spacing: 0.12em;
   font-weight: 300;
 }
-.centered h5 a:link, .centered h5 a:visited, .centered h5 a:active {
-  color: var(--teal);
-}
 .centered h5 a:hover {
-  color: var(--bone);
+  color: var(--teal);
 }
 
 /* Home layout */
@@ -105,11 +102,8 @@ code {
   font-size: 1.2rem;
   letter-spacing: 0.06em;
 }
-.back a:link, .back a:visited, .back a:active {
-  color: var(--red);
-}
 .back a:hover {
-  color: var(--bone);
+  color: var(--red);
 }
 
 /* Log entries */
@@ -166,9 +160,6 @@ article > time {
 .bottom {
   text-align: center;
 }
-.bottom a:link, .bottom a:visited, .bottom a:active {
-  color: var(--red);
-}
 .bottom a:hover {
-  color: var(--bone);
+  color: var(--red);
 }
