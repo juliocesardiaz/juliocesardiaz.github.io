@@ -4,7 +4,7 @@
   --black:     #0A0A0A;   /* Lamp Black — default background */
   --bone:      #F0EBE3;   /* Bone — text, line work */
   --concrete:  #2A2826;   /* Wet Concrete — secondary surfaces, code blocks */
-  --dim:       #635E59;   /* mid-tone — timestamps, back links */
+  --dim:       #635E59;   /* mid-tone — timestamps, secondary text */
   --dark-teal: #0A2A28;   /* Dark Teal Ground — photo alternative to black */
 
   /* Detonation Colors */
@@ -95,9 +95,14 @@ code {
 }
 .back {
   margin-bottom: 4rem;
-  color: var(--dim);
   font-size: 1.2rem;
   letter-spacing: 0.06em;
+}
+.back a:link, .back a:visited, .back a:active {
+  color: var(--red);
+}
+.back a:hover {
+  color: var(--bone);
 }
 
 /* Log entries */
