@@ -145,9 +145,6 @@ article > time {
 
 /* Mobile */
 @media (max-width: 600px) {
-  .site-mark {
-    left: 1.5rem;
-  }
   .centered {
     padding: 3rem 1.5rem;
   }
@@ -166,11 +163,12 @@ article > time {
   }
 }
 
-/* Site mark — small favicon link fixed at bottom of every page */
+/* Site mark — small favicon link fixed at bottom center of every page */
 .site-mark {
   position: fixed;
   bottom: 1.5rem;
-  left: 6rem;
+  left: 50%;
+  transform: translateX(-50%);
   color: var(--bone);
   opacity: 0.45;
   transition: color 0.15s, opacity 0.15s;
