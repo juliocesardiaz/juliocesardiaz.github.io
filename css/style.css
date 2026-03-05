@@ -8,10 +8,11 @@
   --dark-teal: #0A2A28;   /* Dark Teal Ground — photo alternative to black */
 
   /* Detonation Colors */
-  --teal:      #00F0B5;   /* Spectral Teal — UI: links, active, code */
+  --teal:      #00F0B5;   /* Spectral Teal — forward navigation, active links, code */
   --blue:      #0038FF;   /* Electric Blue — primary detonation */
-  --red:       #FF0A0A;   /* Signal Red — spot detonation */
+  --red:       #FF0A0A;   /* Signal Red — back navigation, spot detonation */
   --red-flood: #E8503A;   /* Vermillion Flood — full-field warm red */
+  --orange:    #FF6B00;   /* Burnt Orange — manifesto page ground, literary flood */
   --yellow:    #FFD900;   /* Broadcast Yellow — graphic interruptions */
   --pink:      #FF0090;   /* Hot Pink — rave-flyer, headers, bars */
   --gold:      #C4922A;   /* Gold — photographic/physical contexts only */
@@ -70,6 +71,12 @@ code {
   font-size: 1.2rem;
   letter-spacing: 0.12em;
   font-weight: 300;
+}
+.centered h5 a:link, .centered h5 a:visited, .centered h5 a:active {
+  color: var(--teal);
+}
+.centered h5 a:hover {
+  color: var(--bone);
 }
 
 /* Home layout */
