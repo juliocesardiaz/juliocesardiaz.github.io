@@ -132,8 +132,15 @@ article > time {
 /* About page mark */
 .page-mark {
   display: block;
-  width: 6rem;
+  width: 12rem;
   margin: 0 auto 3rem;
+}
+.section-label {
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  color: var(--dim);
+  margin-bottom: 1.5rem;
 }
 
 /* Mobile */
