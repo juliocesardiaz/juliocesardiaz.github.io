@@ -164,9 +164,30 @@ article > time {
 }
 
 /* Project pages */
+.u-max-full-width { max-width: 100%; box-sizing: border-box; display: block; }
+
+.project-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.project-nav {
+  display: flex;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
 .bottom {
   text-align: center;
 }
 .bottom a:hover {
   color: var(--red);
+}
+
+@media (max-width: 600px) {
+  .project-meta {
+    grid-template-columns: 1fr;
+  }
 }
