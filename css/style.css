@@ -43,6 +43,12 @@ a:hover {
   color: var(--teal);
 }
 
+p a:link, p a:visited, p a:active {
+  text-decoration: underline;
+  text-decoration-color: var(--red-flood);
+}
+
+
 /* Code — Spectral Teal on Wet Concrete */
 code {
   font-family: 'IBM Plex Mono', 'Berkeley Mono', 'JetBrains Mono', monospace;
