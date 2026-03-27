@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../css/base.css">
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+		<title>Replacing a CSS framework with 55 lines — Julio C. Diaz</title>
+	</head>
+	<body>
+		<article class="page">
+			<p class="back"><a href="index.html">← log</a></p>
+			<time>2026-03-03</time>
+			<h1>Replacing a CSS framework with 55 lines</h1>
+			<p>
+				This site was built in 2015 with Skeleton, a CSS boilerplate
+				that was itself already minimal — 419 lines, compared to
+				Bootstrap's thousands. A decade later, Skeleton is unmaintained
+				and the web has better primitives.
+			</p>
+			<p>
+				Before removing it, I audited what the site actually used.
+				Out of 419 lines, four things were referenced in any HTML file:
+				the float-based 12-column grid, the <code>font-size: 62.5%</code>
+				trick that makes 1rem equal 10px, the Raleway font stack with
+				font-weight 300 on headings, and one utility class —
+				<code>.u-max-full-width</code> on images. Everything else —
+				buttons, forms, tables, code blocks, fieldsets — was dead weight
+				loaded on every page.
+			</p>
+			<p>
+				The replacement is <code>css/base.css</code>: 55 lines that
+				provide exactly those four things, with one upgrade. Skeleton's
+				grid was built with <code>float: left</code> and clearfix hacks,
+				the standard technique from 2014. The new grid uses
+				<code>display: flex; flex-wrap: wrap</code> instead. Fewer lines,
+				no clearfixes, columns stack naturally on mobile without
+				additional selectors.
+			</p>
+			<p>
+				The typography is identical to Skeleton's: same rem scale, same
+				font-weight 300, same letter-spacing values. The goal was not to
+				change how anything looks — just to own what produces that look.
+			</p>
+		</article>
+		<a href="../about.html" class="site-mark" aria-label="About">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="28" height="28">
+					<g transform="translate(40, 40)">
+						<circle cx="-24" cy="0" r="7" fill="currentColor"/>
+						<circle cx="24" cy="0" r="7" fill="currentColor"/>
+						<line x1="-10" y1="-5" x2="6" y2="-5" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+						<polygon points="12,-5 4,-12 4,2" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+						<line x1="-10" y1="5" x2="6" y2="5" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+						<polygon points="12,5 4,-2 4,12" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+					</g>
+				</svg>
+		</a>
+	</body>
+</html>

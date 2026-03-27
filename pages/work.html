@@ -1,49 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<link rel="stylesheet" href="../css/skeleton-2.0.4/css/skeleton.css">
-		<link rel="stylesheet" href="../css/skeleton-2.0.4/css/normalize.css">
-		<link rel="stylesheet" href="../css/font-awesome-4.5.0/css/font-awesome.min.css">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../css/base.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 		<link rel="stylesheet" href="../css/style.css">
-		<title>Julio C. Diaz</title>
+		<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+		<title>Projects — Julio C. Diaz</title>
 	</head>
 	<body>
-		<div class="container centered">
-			<div class="row">
-				<div class="twelve columns">
-					<h3>Data Visualization</h3>
-				</div>
-			</div>
-			<div class="row">
-				<div class="twelve columns">
-					<h1> <a href="bigmacindex.html">Big Mac Index Visualization</a></h1>
-				</div>
-			</div>
-			<div class="row">
-				<div class="twelve columns">
-					<h3>AI Experiments</h3>
-				</div>
-			</div>
-			<div class="row">
-				<div class="twelve columns">
-					<h1> <a href="webdubz.html">Webdubz </a><a target="_blank"  href="https://github.com/juliocesardiaz/WebDubz"><i class="fa fa-github"></i></a></h1>
-				</div>
-			</div>
-			<div class="row">
-				<div class="twelve columns">
-					<h1> <a href="face2face.html">Face2Face </a><a target="_blank" href="https://github.com/juliocesardiaz/Face2Face"><i class="fa fa-github"></i></a></h1>
-				</div>
-			</div>
-			<div class="row">
-				<div class="twelve columns">
-					<h1> <a href="experts.html">Experts </a><a target="_blank" href="https://github.com/juliocesardiaz/expertsAngular"><i class="fa fa-github"></i></a></h1>
-				</div>
-			</div>
-			<div class="row">
-				<div class="twelve columns">
-					<h1 class="bottom"><a href="../index.html">Home</a></h1>
-				</div>
-			</div>
+		<div class="page">
+			<p class="back"><a href="../index.html">← home</a></p>
+			<h1>Projects</h1>
+
+			<h2 class="projects-section">Current</h2>
+			<p>
+				[Placeholder — describe what you're actively building or shipping right now.
+				A sentence or two about the project, its purpose, and where it's headed.]
+			</p>
+
+			<h2 class="projects-section">Data Visualization</h2>
+			<p>
+				<a href="bigmacindex.html">Big Mac Index Visualization</a> —
+				A Tableau recreation of The Economist's Big Mac Index with assets generated using Google's Nano Banana AI.
+			</p>
+
+			<h2 class="projects-section">AI Experiments</h2>
+			<p>
+				<a href="experiments_dither_tool.html">Dither Tool</a> —
+				An interactive image dithering experiment built with Claude.
+			</p>
+			<p>
+				<a target="_blank" rel="noopener noreferrer" href="https://g.co/gemini/share/4fe040d97b5c">Law of Large Numbers</a> —
+				A simple visualization of the law of large numbers using coin flips, made with Google Gemini and very few prompts.
+			</p>
+			<p>
+				<a target="_blank" rel="noopener noreferrer" href="https://juliocdiaz.com/nim">Game of Nim</a>
+				<a target="_blank" rel="noopener noreferrer" href="https://github.com/juliocesardiaz/nim/tree/claude/nim-game-tech-research-AlZkW"><i class="fa-brands fa-github"></i></a>
+				— A playable implementation of the mathematical strategy game Nim. Built with Claude Code — the game logic, UI, and strategy were all written through an agentic coding session.
+			</p>
+
+			<h2 class="projects-section">Old</h2>
+			<p class="old-link">
+				<a href="webdubz.html">Webdubz</a>
+				<a target="_blank" rel="noopener noreferrer" href="https://github.com/juliocesardiaz/WebDubz"><i class="fa-brands fa-github"></i></a>
+			</p>
+			<p class="old-link">
+				<a href="face2face.html">Face2Face</a>
+				<a target="_blank" rel="noopener noreferrer" href="https://github.com/juliocesardiaz/Face2Face"><i class="fa-brands fa-github"></i></a>
+			</p>
+			<p class="old-link">
+				<a href="experts.html">Experts</a>
+				<a target="_blank" rel="noopener noreferrer" href="https://github.com/juliocesardiaz/expertsAngular"><i class="fa-brands fa-github"></i></a>
+			</p>
 		</div>
+		<a href="../about.html" class="site-mark" aria-label="About">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="28" height="28">
+					<g transform="translate(40, 40)">
+						<circle cx="-24" cy="0" r="7" fill="currentColor"/>
+						<circle cx="24" cy="0" r="7" fill="currentColor"/>
+						<line x1="-10" y1="-5" x2="6" y2="-5" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+						<polygon points="12,-5 4,-12 4,2" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+						<line x1="-10" y1="5" x2="6" y2="5" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+						<polygon points="12,5 4,-2 4,12" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+					</g>
+				</svg>
+		</a>
 	</body>
 </html>

@@ -1,45 +1,233 @@
+/* Palette */
+:root {
+  /* Ground Mode */
+  --black:     #0A0A0A;   /* Lamp Black — default background */
+  --bone:      #F0EBE3;   /* Bone — text, line work */
+  --concrete:  #2A2826;   /* Wet Concrete — secondary surfaces, code blocks */
+  --dim:       #635E59;   /* mid-tone — timestamps, secondary text */
+  --dark-teal: #0A2A28;   /* Dark Teal Ground — photo alternative to black */
+
+  /* Detonation Colors */
+  --teal:      #00F0B5;   /* Spectral Teal — forward navigation, active links, code */
+  --blue:      #0038FF;   /* Electric Blue — primary detonation */
+  --red:       #FF0A0A;   /* Signal Red — back navigation, spot detonation */
+  --red-flood: #E8503A;   /* Vermillion Flood — full-field warm red */
+  --orange:    #FF6B00;   /* Burnt Orange — manifesto page ground, literary flood */
+  --yellow:    #FFD900;   /* Broadcast Yellow — graphic interruptions */
+  --pink:      #FF0090;   /* Hot Pink — rave-flyer, headers, bars */
+  --gold:      #C4922A;   /* Gold — photographic/physical contexts only */
+}
+
+/* Ground */
+html { background: var(--black); }
+body { color: var(--bone); }
+
+/* Headings */
 h1 {
-    text-align: left;
-    color: white;
-    outline-color: white;
+  color: var(--bone);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 h5 {
-    text-align: left;
-    padding-left:  50px;
-    color: white;
-    outline-color: white;
+  color: var(--bone);
+  font-weight: 300;
 }
 
-.container-fluid {
-    background: black;
-}
-
-html{
-    background: black;
-}
-
-.centered {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  /* bring your own prefixes */
-  transform: translate(-50%, -50%);
-}
-
+/* Links — Bone default, Teal on hover, no layout reflow */
 a:link, a:visited, a:active {
-    color: white;
-    text-decoration: none;
+  color: var(--bone);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--teal);
 }
 
-a:hover{
-    font-weight: bolder;
-    color: lightslategrey;
+/* Code — Spectral Teal on Wet Concrete */
+code {
+  font-family: 'IBM Plex Mono', 'Berkeley Mono', 'JetBrains Mono', monospace;
+  color: var(--teal);
+  background: var(--concrete);
+  padding: 0.1em 0.4em;
+  font-size: 0.88em;
 }
 
-.comingsoon {
-    text-align: center;
-    background-color: lightpink;
+/* Home page */
+.centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 0 2rem 0 6rem;
 }
+.centered h1 {
+  font-size: 2rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 2.4rem;
+}
+.centered h5 {
+  padding-left: 50px;
+  font-size: 1.2rem;
+  letter-spacing: 0.12em;
+  font-weight: 300;
+}
+.centered h5 a:hover {
+  color: var(--teal);
+}
+
+/* Home layout */
+.home-hero {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 4rem;
+}
+.home-portrait {
+  max-width: 22rem;
+  width: 100%;
+}
+
+/* Inner pages */
+.page {
+  max-width: 65ch;
+  padding: 4rem 2rem 4rem 6rem;
+}
+.page p {
+  margin-bottom: 1.5rem;
+  line-height: 1.55;
+}
+.back {
+  margin-bottom: 4rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.06em;
+}
+.back a:hover {
+  color: var(--red);
+}
+
+/* Log entries */
+.log-entry {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+.log-entry time {
+  color: var(--dim);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* Article datestamp */
+article > time {
+  display: block;
+  color: var(--dim);
+  letter-spacing: 0.06em;
+  margin-bottom: 1.5rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.2rem;
+}
+
+/* About page mark */
+.page-mark {
+  display: block;
+  width: 12rem;
+  margin: 0 auto 3rem;
+}
+.section-label {
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  color: var(--dim);
+  margin-bottom: 1.5rem;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .centered {
+    padding: 3rem 1.5rem;
+  }
+  .centered h5 {
+    padding-left: 0;
+  }
+  .home-hero {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .home-portrait {
+    max-width: 100%;
+  }
+  .page {
+    padding: 3rem 1.5rem;
+  }
+}
+
+/* Site mark — small favicon link fixed at bottom center of every page */
+.site-mark {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--bone);
+  opacity: 0.45;
+  transition: color 0.15s, opacity 0.15s;
+  line-height: 0;
+  display: block;
+}
+.site-mark:hover {
+  color: var(--red);
+  opacity: 1;
+}
+
+/* Projects page sections */
+.projects-section {
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin: 3rem 0 0.75rem;
+}
+.old-link {
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.6rem;
+}
+.old-link .fa-github {
+  color: var(--dim);
+  font-size: 0.85em;
+  margin-left: 0.4em;
+}
+.old-link .fa-github:hover {
+  color: var(--teal);
+}
+
+/* Project pages */
+.u-max-full-width { max-width: 100%; box-sizing: border-box; display: block; }
+
+.project-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.project-nav {
+  display: flex;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
 .bottom {
-    text-align: center;
+  text-align: center;
+}
+.bottom a:hover {
+  color: var(--red);
+}
+
+@media (max-width: 600px) {
+  .project-meta {
+    grid-template-columns: 1fr;
+  }
 }
